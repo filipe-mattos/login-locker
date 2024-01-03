@@ -1,9 +1,23 @@
 <app-header></app-header>
-<div class="flex justify-center">
-  <app-plataform-card></app-plataform-card>
-  <app-plataform-card></app-plataform-card>
-  <app-plataform-card></app-plataform-card>
-  <app-plataform-card></app-plataform-card>
+<div>
+  <input
+    type="text"
+    class="px-1.5 py-2 border-2 bg-emerald-200"
+    [(ngModel)]="sectionTitle"
+  >
+  <button class="p-2 rounded bg-amber-200 text-blue-500"
+          [disabled]="!disabled"
+          (click)="onCreatePlataform()">Add a platform</button>
+  <div class="flex flex-wrap flex-col items-center">
+    <h1 class="text-4xl font-bold my-10">{{sectionTitle}}</h1>
+    <div class="flex justify-center mt-10">
+      <app-plataform-card></app-plataform-card>
+      <app-plataform-card></app-plataform-card>
+      <app-plataform-card></app-plataform-card>
+      <app-plataform-card></app-plataform-card>
+    </div>
+  </div>
+
 </div>
 <app-footer></app-footer>
 

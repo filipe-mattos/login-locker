@@ -6,6 +6,7 @@ import {HomePageComponent} from "./homePage/homePage.component";
 import {PlataformCardComponent} from "./Shared/plataformCard/plataformCard.component";
 import {HeaderComponent} from "./Shared/header/header.component";
 import {FooterComponent} from "./Shared/footer/footer.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FooterComponent} from "./Shared/footer/footer.component";
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,4 +6,7 @@ import {Component} from "@angular/core";
 })
 export class PlataformCardComponent{
 
+  user: string = 'Filipe';
+  password: string = '12345';
+  plataformName: string = 'Steam';
 }
