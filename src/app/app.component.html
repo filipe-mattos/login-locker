@@ -1,1 +1,14 @@
-<app-homePage></app-homePage>
+<app-header></app-header>
+<app-homePage
+  (platformCreated)="onPlatformCreated($event)"
+></app-homePage>
+<div class="flex flex-wrap flex-col items-center">
+<!--  <h1 class="text-4xl font-bold my-10">{{sectionTitle}}</h1>-->
+  <div class="flex justify-center mt-10 flex-wrap">
+    <app-plataform-card
+      *ngFor="let platform of platforms"
+      [platformData]="platform"
+    ></app-plataform-card>
+  </div>
+</div>
+<app-footer></app-footer>

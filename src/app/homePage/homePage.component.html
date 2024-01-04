@@ -1,24 +1,41 @@
-<app-header></app-header>
+
 <div>
   <input
     type="text"
     class="px-1.5 py-2 border-2 bg-emerald-200"
     [(ngModel)]="sectionTitle"
   >
-  <button class="p-2 rounded bg-amber-200 text-blue-500"
+  <section>
+    <input
+      placeholder="platformName"
+      type="text"
+      class="px-1.5 py-2 border-2 bg-emerald-200"
+      [(ngModel)]="newPlatform"
+    >
+    <input
+      placeholder="username"
+      type="text"
+      class="px-1.5 py-2 border-2 bg-emerald-200"
+      [(ngModel)]="newUsername"
+    >
+    <input
+      placeholder="password"
+      type="text"
+      class="px-1.5 py-2 border-2 bg-emerald-200"
+      [(ngModel)]="newPassword"
+    >
+  </section>
+
+  <button *ngIf="disabled; else btnDisabled" class="p-2 rounded bg-amber-200 text-blue-500"
           [disabled]="!disabled"
           (click)="onCreatePlataform()">Add a platform</button>
-  <div class="flex flex-wrap flex-col items-center">
-    <h1 class="text-4xl font-bold my-10">{{sectionTitle}}</h1>
-    <div class="flex justify-center mt-10">
-      <app-plataform-card></app-plataform-card>
-      <app-plataform-card></app-plataform-card>
-      <app-plataform-card></app-plataform-card>
-      <app-plataform-card></app-plataform-card>
-    </div>
-  </div>
-
+  <ng-template #btnDisabled >
+    <button
+      class="p-2 rounded bg-gray-200 text-gray-500"
+      [disabled]="!disabled"
+      (click)="onCreatePlataform()">Botao Desabilitado</button>
+  </ng-template>
 </div>
-<app-footer></app-footer>
+
 
 

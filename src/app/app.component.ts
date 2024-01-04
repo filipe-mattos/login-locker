@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'login-locker';
+
+  platforms: {
+    username: string,
+    password: string,
+    platformName: string,
+  }[] = [];
+
+  onPlatformCreated(plataformData: {username: string, password: string, platformName: string,}){
+    this.platforms.push({
+      username: plataformData.username,
+      password: plataformData.password,
+      platformName: plataformData.platformName,
+    })
+  }
+
 }
