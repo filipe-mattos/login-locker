@@ -7,6 +7,8 @@ import {PlataformCardComponent} from "./Shared/plataformCard/plataformCard.compo
 import {HeaderComponent} from "./Shared/header/header.component";
 import {FooterComponent} from "./Shared/footer/footer.component";
 import {FormsModule} from "@angular/forms";
+import {BasicHighlightDirective} from "./basic-highligtht/basic-highlight.directive";
+import {BetterHighlightDirective} from "./better-highligtht/better-highlight.directive";
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import {FormsModule} from "@angular/forms";
     HomePageComponent,
     PlataformCardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,

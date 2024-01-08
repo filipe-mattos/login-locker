@@ -19,6 +19,38 @@ export class HomePageComponent {
     },2000)
   }
 
+  //Utilizado para hocks no ciclo de vida dos componentes
+  //On init e chamando quando o componennte e  inicializado
+  ngOnInit(){
+
+  }
+
+  //On change e chhamanndo sempre que uma propiedade input e alterada
+  ngOnChanges(){
+
+  }
+
+  //Do check e  chamado quando qualquer alteracao no componente e feita
+  //Ou  seja  sempre que o componennte e  renderizado ou utilizado
+  ngDoCheck(){}
+
+  //E chamado depois que o conteudo  do componnente e  projetado na view
+  ngAfterContenntInit(){
+
+  }
+
+  //E chamado toda vez que o conteudo do componente e  verificado
+  ngAfterContentChecked(){}
+
+  //E chamado apos o as view e chieldView forem iniciadas
+  ngAfterViewInit(){}
+
+  //E chamado no momento em que a view e verificada
+  ngAfterViewCheck(){}
+
+  //E   chamado  quando o componente  e "destruido"
+  ngOnDestroy(){}
+
   onCreatePlataform(){
     this.platformCreated.emit(
       {
